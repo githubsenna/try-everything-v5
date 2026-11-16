@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>石門國小五年級｜Try Everything 運動會進場舞（兩分鐘精華版）・八拍口訣與評量檢核單</title>
+  <style>
+    /* ========================================================================
+       A4 橫向滿版列印與雙版本切換樣式（無浮水印、無頁碼、採用清晰無襯線字型）
+       ======================================================================== */
+    :root {
+      --ink: #0f172a;
+      --ink-sub: #334155;
+      --line: #1e293b;
+      --line-soft: #94a3b8;
+      --bg-tint: #f1f5f9;
+      --bg-warn: #fef3c7;
+      --border-warn: #b45309;
+      --bg-easy: #ecfdf5;
+      --border-easy: #047857;
+      --font-sans: system-ui, -apple-system, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+
+    @page {
+      size: A4 landscape;
+      margin: 8mm;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-sans);
+      color: var(--ink);
+      background: #e2e8f0;
+      line-height: 1.4;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 10px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .toolbar-title {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tool-btn {
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1.5px solid #475569;
+      background: #1e293b;
+      color: #f8fafc;
+      cursor: pointer;
+    }
+
+    .tool-btn:hover { border-color: #38bdf8; }
+    .tool-btn.active {
+      background: #0284c7;
+      border-color: #38bdf8;
+      color: #ffffff;
+    }
+
+    .tool-btn-print {
+      background: #059669;
+      border-color: #34d399;
+      color: #ffffff;
+    }
+    .tool-btn-print:hover { background: #047857; }
+
+    .sheet {
+      width: 281mm;
+      min-height: 193mm;
+      margin: 14px auto;
+      background: #ffffff;
+      padding: 6mm 7mm;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.16);
+    }
+
+    .sheet.hidden { display: none; }
+
+    .sheet-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2.5px solid var(--line);
+      padding-bottom: 5px;
+      margin-bottom: 6px;
+      gap: 8px;
+    }
+
+    .sheet-header h1 {
+      margin: 0;
+      font-size: 15pt;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .version-badge {
+      display: inline-block;
+      font-size: 9.5pt;
+      font-weight: 800;
+      padding: 2px 8px;
+      border: 1.5px solid var(--line);
+      background: var(--bg-tint);
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .student-meta {
+      font-size: 10.5pt;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .blank-line {
+      display: inline-block;
+      border-bottom: 1.5px solid var(--line);
+      text-align: center;
+      margin: 0 2px;
+    }
+
+    .mirror-box {
+      background: var(--bg-warn);
+      border: 1.5px solid var(--border-warn);
+      padding: 5px 10px;
+      font-size: 9.2pt;
+      font-weight: 700;
+      margin-bottom: 7px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    table.dance-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 9pt;
+    }
+
+    table.dance-table th,
+    table.dance-table td {
+      border: 1px solid var(--line);
+      padding: 5px 6px;
+      vertical-align: top;
+      word-wrap: break-word;
+    }
+
+    table.dance-table thead th {
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 800;
+      text-align: center;
+      font-size: 9.2pt;
+      padding: 5px 6px;
+    }
+
+    table.dance-table tbody tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .col-sec {
+      width: 13%;
+      background: var(--bg-tint);
+      font-weight: 700;
+    }
+
+    .col-step { width: 17.25%; }
+
+    .col-easy {
+      width: 12%;
+      background: var(--bg-easy);
+      font-size: 8.4pt;
+    }
+
+    .col-check {
+      width: 6%;
+      text-align: center;
+      vertical-align: middle !important;
+      font-size: 8.3pt;
+      font-weight: 700;
+    }
+
+    .sec-name {
+      font-size: 9.8pt;
+      font-weight: 900;
+      display: block;
+    }
+
+    .sec-time {
+      font-size: 8.2pt;
+      color: var(--ink-sub);
+      display: block;
+    }
+
+    .sec-rhyme {
+      display: inline-block;
+      margin-top: 3px;
+      padding: 1px 5px;
+      background: #e2e8f0;
+      border: 1px solid #64748b;
+      font-size: 8pt;
+      font-weight: 800;
+    }
+
+    .step-tag {
+      font-weight: 900;
+      font-size: 9.3pt;
+      color: #0f172a;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .step-t {
+      font-size: 7.8pt;
+      font-weight: 700;
+      color: #475569;
+      margin-right: 3px;
+    }
+
+    .check-item {
+      display: block;
+      margin: 4px 0;
+      text-align: left;
+      padding-left: 2px;
+    }
+
+    .bottom-grid {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 8px;
+      font-size: 8.8pt;
+    }
+
+    .box-panel {
+      border: 1.5px solid var(--line);
+      padding: 6px 9px;
+      background: #ffffff;
+    }
+
+    .box-panel-title {
+      font-weight: 900;
+      font-size: 9.3pt;
+      margin-bottom: 3px;
+      border-bottom: 1px solid var(--line-soft);
+      padding-bottom: 2px;
+    }
+
+    .teacher-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 7px;
+      font-size: 8.8pt;
+    }
+
+    .sop-list {
+      margin: 4px 0 0;
+      padding-left: 18px;
+    }
+
+    .sop-list li { margin-bottom: 3px; }
+
+    table.rubric-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 8.5pt;
+      margin-top: 4px;
+    }
+
+    table.rubric-table th,
+    table.rubric-table td {
+      border: 1px solid var(--line);
+      padding: 4px 6px;
+      vertical-align: top;
+    }
+
+    table.rubric-table thead th {
+      background: #0f172a;
+      color: #ffffff;
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .dim-col {
+      width: 16%;
+      background: var(--bg-tint);
+      font-weight: 800;
+    }
+
+    .score-pill {
+      display: inline-block;
+      margin-top: 2px;
+      padding: 1px 5px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      font-size: 8pt;
+      font-weight: 800;
+    }
+
+    table.record-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.4pt;
+      margin-top: 6px;
+    }
+
+    table.record-table th,
+    table.record-table td {
+      border: 1px solid var(--line);
+      padding: 3.5px 6px;
+      text-align: center;
+    }
+
+    table.record-table th {
+      background: var(--bg-tint);
+      font-weight: 800;
+    }
+
+    @media print {
+      body { background: #ffffff; }
+      .no-print { display: none !important; }
+      .sheet {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+      }
+      .sheet.page-break { page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="toolbar no-print" aria-label="版本切換與列印控制">
+    <div class="toolbar-title">📄 石門國小五年級《Try Everything（兩分鐘精華版）》A4 滿版教材切換列</div>
+    <div class="toolbar-actions">
+      <button type="button" class="tool-btn active" data-mode="student">📄 學生發放版（口訣小抄＆自練檢核）</button>
+      <button type="button" class="tool-btn" data-mode="teacher">👩‍🏫 教師備課＆評量規準版</button>
+      <button type="button" class="tool-btn" data-mode="both">📑 雙面全印（正面學生＋背面教師）</button>
+      <button type="button" id="btn-print" class="tool-btn tool-btn-print">🖨️ 一鍵列印 A4 橫式</button>
+    </div>
+  </nav>
+
+  <!-- =======================================================================
+       版本一：學生發放作答／自練檢核版（V5.0 兩分鐘精華版｜5 大段・共 28 個八拍・0:00–1:50）
+       ======================================================================= -->
+  <article id="sheet-student" class="sheet" aria-label="學生發放版口訣小抄與自練檢核單">
+    <header class="sheet-header">
+      <h1>
+        石門國小五年級運動會進場舞《Try Everything》兩分鐘精華版・口訣秘笈
+        <span class="version-badge">學生自練版（5 大段）</span>
+      </h1>
+      <div class="student-meta">
+        五年 <span class="blank-line" style="width:24px;"></span> 班　座號：<span class="blank-line" style="width:28px;"></span>　姓名：<span class="blank-line" style="width:82px;"></span>　完成度：<span class="blank-line" style="width:24px;"></span> / 5 段
+      </div>
+    </header>
+
+    <div class="mirror-box">
+      <span>💡 <strong>鏡面直覺規則 ＋ 音樂剪接線索：</strong>看著影片就像「照鏡子」；第 1 段前奏（0:00–0:16）結束後，無縫接續原片 1:39 之第 2 段主歌一路跳至 1:50 結束！</span>
+      <span>✅ 下表已全部寫成<strong>【你自己的左右手腳】</strong>（共 28 個八拍・18 個分解動作）</span>
+    </div>
+
+    <table class="dance-table">
+      <thead>
+        <tr>
+          <th class="col-sec">段落｜時間｜總口訣</th>
+          <th class="col-step">步驟 ①</th>
+          <th class="col-step">步驟 ②</th>
+          <th class="col-step">步驟 ③</th>
+          <th class="col-step">步驟 ④</th>
+          <th class="col-easy">🌱 基礎保底提示<br>（跟不上時這樣做）</th>
+          <th class="col-check">自練<br>打勾</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-sec">
+            <span class="sec-name">01 前奏 (4八拍)</span>
+            <span class="sec-time">0:00–0:16｜Welcome</span>
+            <span class="sec-rhyme">抱肩衝天・揮拳轉身</span>
+          </td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:00–0:05</span>① 交叉抱肩＋右衝天</span>雙手胸前交叉抱肩打開 ➔ 右拳高舉衝天小跳。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:05–0:09</span>② 交叉開展＋左衝天</span>雙手胸前交叉向兩側開 ➔ 換左拳高舉衝天舉滿 4 拍至 9 秒。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:09–0:13</span>③ 側身揮拳4次</span>向右微側身，單手往天空邊跳邊揮滿 4 拳落地回正。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:13–0:16</span>④ 展臂開掌＋轉回</span>正面雙臂大展 ➔ 雙掌外攤、快速轉一圈回正。</td>
+          <td class="col-easy">15.5秒轉一圈若來不及，原地攤掌微蹲，0:16準時接主歌！</td>
+          <td class="col-check"><span class="check-item">□ 慢速</span><span class="check-item">□ 原速</span></td>
+        </tr>
+        <tr>
+          <td class="col-sec">
+            <span class="sec-name">02 主歌 (4八拍)</span>
+            <span class="sec-time">0:16–0:34｜接原片1:39</span>
+            <span class="sec-rhyme">斜指叉腰・平展舉手</span>
+          </td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:16–0:21.5</span>① 左手斜指</span>前奏攤手回正後 ➔ 左手斜上指天、右手插腰至 21.5 秒。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:21.5–0:25.5</span>② 換右手斜指</span>從 21.5 秒換邊！右手斜上指天、左手插腰點步。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:25.5–0:29.5</span>③ 收胸平展雙臂</span>雙手收胸前點步 ➔ 雙臂往兩側水平大大展開。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:29.5–0:34</span>④ 展臂舉手收胸</span>雙臂平展律動 ➔ 右手舉耳旁、完整收手至第 34 秒。</td>
+          <td class="col-easy">腳不踢高、不後勾，記住「左指→右指→平展→舉手收胸」。</td>
+          <td class="col-check"><span class="check-item">□ 慢速</span><span class="check-item">□ 原速</span></td>
+        </tr>
+        <tr>
+          <td class="col-sec">
+            <span class="sec-name">03 副歌 (8八拍)</span>
+            <span class="sec-time">0:34–1:07｜Won't give up</span>
+            <span class="sec-rhyme">左跨後勾・舉手壓膝扭臀</span>
+          </td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:34–0:42</span>① 左跨舉左手</span>左腳往左跨大步踩穩，左手高舉過頭、右手插腰。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:42–0:50.5</span>② 左後勾舉右手</span>左腳跟往後勾（非前踢），換右手高舉交替循環。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:50.5–0:58.5</span>③ 側轉出拳＋高舉揮手</span>微側身點步出拳過渡 ➔ 轉回正面單手高舉揮滿至 58.5 秒。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">0:58.5–1:07</span>④ 側步壓膝＋舉手扭臀</span>開腳下蹲雙掌壓大腿（1:01）➔ 站直舉手扭臀收手架肘。</td>
+          <td class="col-easy">單腳後勾若站不穩，可改原地踏步＋左右輪流高舉換手。</td>
+          <td class="col-check"><span class="check-item">□ 慢速</span><span class="check-item">□ 原速</span></td>
+        </tr>
+        <tr>
+          <td class="col-sec">
+            <span class="sec-name">04 橋段 (4八拍・兩大組)</span>
+            <span class="sec-time">1:07–1:28.5｜重低音</span>
+            <span class="sec-rhyme">水手叉跳・右轉彩虹跳</span>
+          </td>
+          <td class="col-step" colspan="2"><span class="step-tag"><span class="step-t">1:07–1:15（前 2 個八拍）</span>① 大力水手 ＋ 胸前交叉跳</span>雙肘架高與肩同平握拳上下彈動 ➔ 雙手胸前交叉搭原地小開合跳。</td>
+          <td class="col-step" colspan="2"><span class="step-tag"><span class="step-t">1:15–1:28.5（後 2 個八拍）</span>② 右轉彩虹 ＋ 臉前交叉小跳</span>身體右轉用左手頭頂畫大彩虹回正面 ➔ 雙手舉臉前交叉小跳 2 下接結尾。</td>
+          <td class="col-easy">全程只有原地小跳、沒有大跳，把秀肌肉的手肘架高就有氣勢！</td>
+          <td class="col-check"><span class="check-item">□ 慢速</span><span class="check-item">□ 原速</span></td>
+        </tr>
+        <tr>
+          <td class="col-sec">
+            <span class="sec-name">05 結尾 (8八拍)</span>
+            <span class="sec-time">1:28.5–1:50｜Try x3</span>
+            <span class="sec-rhyme">左跨壓膝・深蹲畫圓定格</span>
+          </td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">1:28.5–1:36.5</span>① 左跨弓步壓膝</span>向【左】大跨弓箭步、畫圓後低蹲穩扶左膝壓滿至 1:36.5。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">1:36.5–1:42.5</span>② 回正開腳搖擺深蹲</span>從左弓步轉回正面開腳站立，左右搖擺＋深蹲蓄力。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">1:42.5–1:47</span>③ 站直畫大圓＋轉圈</span>正面站直 ➔ 雙手頭頂畫大圓展開並快速轉一圈回正面。</td>
+          <td class="col-step"><span class="step-tag"><span class="step-t">1:47–1:50</span>④ 左手指前微笑定格</span>左手伸直指向前方、右手插腰，全班微笑定格 3 秒！</td>
+          <td class="col-easy">注意第1步往【左】跨！最後「左手指前定格」全班對齊滿分！</td>
+          <td class="col-check"><span class="check-item">□ 慢速</span><span class="check-item">□ 原速</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="bottom-grid">
+      <div class="box-panel">
+        <div class="box-panel-title">🌟 延伸思考／小老師進階挑戰任務（兩分鐘精華版重點提示）</div>
+        <div>
+          1. <strong>當組員的「0:16 換段指揮官」：</strong>第 1 段前奏一攤手轉正，立即帶組員在「0:16 第 1 拍」接出「左手斜指」！<br>
+          2. <strong>結尾定格總檢查：</strong>確認全組在 1:47 時「左手往前指、右手叉腰、眼睛看前方微笑定格 3 秒到 1:50 音樂結束」。<br>
+          我最需要多練的一段是：第 ____ 段　｜　我已經可以當哪一段的小老師：第 ____ 段
+        </div>
+      </div>
+      <div class="box-panel">
+        <div class="box-panel-title">📱 在家自學 3 步驟口訣（搭配 V5.0 互動網頁）</div>
+        <div>
+          ① <strong>先切「🐢 第一步：慢速練這 1 格 (0.6x)」</strong>：點照片卡慢速練熟並定格看清收尾！<br>
+          ② <strong>進階「🚶 第二步：慢速連跳這整段 (0.75x)」</strong>：特別多練 0:16 前奏接主歌的順暢度。<br>
+          ③ <strong>驗收「🏃 第三步：原速過關挑戰 (1.0x)」</strong>與上方<strong>「🏆 全曲連跳（1分50秒）」</strong>，完成後在打勾欄記錄！
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- =======================================================================
+       版本二：教師備課與 100 分制 4 向度標準評量規準版（V5.0）
+       ======================================================================= -->
+  <article id="sheet-teacher" class="sheet hidden" aria-label="教師備課與評量規準版">
+    <header class="sheet-header">
+      <h1>
+        石門國小五年級運動會進場舞《Try Everything》兩分鐘精華版・帶練＆評量規準
+        <span class="version-badge">教師備課與評量解答版</span>
+      </h1>
+      <div class="student-meta">
+        適用對象：五年一、二、三班聯合進場（5 大段・0:00–1:50）｜總配分：100 分（四向度 Rubrics）
+      </div>
+    </header>
+
+    <div class="teacher-grid">
+      <div class="box-panel">
+        <div class="box-panel-title">👩‍🏫 三班導師「兩分鐘精華版帶練 4 步驟 SOP」</div>
+        <ol class="sop-list">
+          <li><strong>教室投影直接開《V5.0 互動帶練系統》：</strong>影片已將「0:00–0:16 前奏」與「原片 1:39–3:13 後半精華」剪輯為順暢 1 分 50 秒，開啟「🚶 0.75x 整段循環」跟著唸口令即可，不必重新記複雜舊段數。</li>
+          <li><strong>跨段銜接重點提示（0:16）：</strong>原片 0:16 前奏結尾與 1:39 主歌二開頭姿態相同（正面雙掌微攤收手）；提醒三班學生前奏攤手完<strong>直接「左手斜指」進入第 2 段主歌</strong>。</li>
+          <li><strong>拆解順序建議（一節課即上手）：</strong>先練動作大且吸睛的 <strong>05 結尾定格 → 01 前奏 → 04 橋段</strong>，再補 <strong>02 主歌（4 格）與 03 副歌</strong>，全曲僅 18 步、精簡好背整齊度極高！</li>
+          <li><strong>容錯與保底原則：</strong>節奏較弱學生引導使用小抄「🌱 基礎保底提示」（後勾改踏步、轉圈改碎步），優先守住<strong>「0:16 換段第 1 拍」與「1:47–1:50 結尾定格」</strong>。</li>
+        </ol>
+      </div>
+      <div class="box-panel">
+        <div class="box-panel-title">📣 教室／操場三班聯合帶練口令速查（新舊時間對照，共 5 大段）</div>
+        <div style="line-height:1.52;">
+          • <strong>01 前奏（0:00–0:16｜同原片 0:00）：</strong>交叉抱肩右衝天 (0:00–0:05) → 交叉開展左衝天 (0:05–0:09) → 側身揮拳4次 (0:09–0:13) → 展臂開掌轉回正 (0:13–0:16)。<br>
+          • <strong>02 主歌（0:16–0:34｜接原片 1:39）：</strong>左手斜指 (0:16–0:21.5) → 換右手斜指 (0:21.5–0:25.5) → 收胸平展雙臂 (0:25.5–0:29.5) → 展臂舉手收胸 (0:29.5–0:34)。<br>
+          • <strong>03 副歌（0:34–1:07｜原片 1:57）：</strong>左跨舉左手 → 左後勾舉右手 → 側轉出拳＋高舉揮手 → 側步壓膝＋舉手扭臀架雙肘。<br>
+          • <strong>04 橋段（1:07–1:28.5｜原片 2:30）：</strong>大力水手＋胸前交叉跳 → 右轉頭頂畫大彩虹＋臉前交叉小跳（兩大組）。<br>
+          • <strong>05 結尾（1:28.5–1:50｜原片 2:51.5）：</strong><strong>左跨弓步畫圓壓膝</strong> (至 1:36.5) → 回正開腳搖擺深蹲 → 站直畫大圓轉圈 → <strong>左手指前微笑定格 3 秒 (1:47–1:50)！</strong>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-weight:900; font-size:9.5pt; margin-bottom:2px;">📊 運動會進場舞（兩分鐘精華版）100 分制・4 向度標準評分量表（Rubrics 矩陣）</div>
+    <table class="rubric-table">
+      <thead>
+        <tr>
+          <th class="dim-col">評量向度（權重）</th>
+          <th>優等（90%–100% 該項配分）</th>
+          <th>良好（80%–89% 該項配分）</th>
+          <th>尚可（70%–79% 該項配分）</th>
+          <th>待加強（69% 以下該項配分）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dim-col">
+            一、節拍掌握與口訣對應
+            <span class="score-pill">滿分 30 分</span>
+          </td>
+          <td><strong>27–30 分：</strong>全程精準跟上原速（1.0x）28 個八拍節奏，能依口訣在 0:16 等換段「第 1 拍」同時出手。</td>
+          <td><strong>24–26 分：</strong>大部分段落能跟上音樂節拍，僅在副歌快速換邊時偶有半拍誤差，能迅速修正。</td>
+          <td><strong>21–23 分：</strong>需依賴老師或同儕口令提示才能跟上換段拍點，慢速（0.75x）可完成但原速略趕。</td>
+          <td><strong>20 分以下：</strong>無法辨識段落與八拍起點，動作明顯落後或搶拍且未能回到音樂節奏。</td>
+        </tr>
+        <tr>
+          <td class="dim-col">
+            二、鏡面方向與動作完整度
+            <span class="score-pill">滿分 30 分</span>
+          </td>
+          <td><strong>27–30 分：</strong>學生端左右手腳方向 100% 正確（不與螢幕顛倒），5 大段 18 步動作延伸飽滿、跨步到位。</td>
+          <td><strong>24–26 分：</strong>方向大致正確，5 大段動作記憶完整，唯部分轉身或壓膝幅度略小。</td>
+          <td><strong>21–23 分：</strong>部分段落左右手腳偶爾混淆，但能穩定使用「保底提示動作」維持隊伍律動。</td>
+          <td><strong>20 分以下：</strong>多處動作忘記或左右方向頻繁錯誤，影響整體視覺整齊度。</td>
+        </tr>
+        <tr>
+          <td class="dim-col">
+            三、0:16 銜接與定格整齊度
+            <span class="score-pill">滿分 20 分</span>
+          </td>
+          <td><strong>18–20 分：</strong>0:16 前奏轉主歌及 5 段銜接流暢不卡頓，結尾「左手指前、右手叉腰」與全班同步微笑定格至 1:50。</td>
+          <td><strong>16–17 分：</strong>段落銜接偶有停頓但能接續跳完，結尾定格姿勢正確且維持 3 秒以上。</td>
+          <td><strong>14–15 分：</strong>換段之間需看旁邊同學才接得上，結尾定格有做出但過早放下或忘記看前方。</td>
+          <td><strong>13 分以下：</strong>遇剪接換段或失誤即停在原地不動，或未完成結尾定格即散場。</td>
+        </tr>
+        <tr>
+          <td class="dim-col">
+            四、自主練習與團隊合作態度
+            <span class="score-pill">滿分 20 分</span>
+          </td>
+          <td><strong>18–20 分：</strong>確實完成《口訣小抄》打勾自練並積極協助指導組員（擔任動作小老師），展現運動家精神。</td>
+          <td><strong>16–17 分：</strong>能依計畫完成課堂與課後自主練習檢核，上台專注投入、面帶笑容。</td>
+          <td><strong>14–15 分：</strong>能配合團體排練，但自主練習檢核紀錄未完成或練習態度較被動。</td>
+          <td><strong>13 分以下：</strong>排練時常分心或拒跳，未繳交／未執行自練檢核單任務。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="record-table">
+      <thead>
+        <tr>
+          <th style="width:14%;">驗收組別／座號範圍</th>
+          <th style="width:15%;">節拍與口訣 (30分)</th>
+          <th style="width:15%;">方向與完整度 (30分)</th>
+          <th style="width:15%;">銜接與定格 (20分)</th>
+          <th style="width:15%;">自練與態度 (20分)</th>
+          <th style="width:10%;">總分 (100)</th>
+          <th style="width:16%;">導師優先補強段落備註</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>第 1 組（　～　號）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>第 2 組（　～　號）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>第 3 組（　～　號）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>第 4 組（　～　號）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </article>
+
+  <script>
+    const sheetStudent = document.getElementById('sheet-student');
+    const sheetTeacher = document.getElementById('sheet-teacher');
+    const modeButtons = document.querySelectorAll('.tool-btn[data-mode]');
+
+    function applyViewMode(mode) {
+      modeButtons.forEach((btn) => {
+        btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
+      });
+
+      if (mode === 'student') {
+        sheetStudent.classList.remove('hidden');
+        sheetTeacher.classList.add('hidden');
+        sheetTeacher.classList.remove('page-break');
+      } else if (mode === 'teacher') {
+        sheetStudent.classList.add('hidden');
+        sheetTeacher.classList.remove('hidden');
+        sheetTeacher.classList.remove('page-break');
+      } else {
+        sheetStudent.classList.remove('hidden');
+        sheetTeacher.classList.remove('hidden');
+        sheetTeacher.classList.add('page-break');
+      }
+    }
+
+    modeButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        applyViewMode(btn.getAttribute('data-mode'));
+      });
+    });
+
+    document.getElementById('btn-print').addEventListener('click', () => {
+      window.print();
+    });
+  </script>
+</body>
+</html>
